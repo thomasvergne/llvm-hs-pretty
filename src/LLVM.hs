@@ -1,7 +1,7 @@
 module LLVM (
-  module LLVM.Typed,
+  module Typed,
   module LLVM.Pretty
 ) where
 
-import LLVM.Typed
+import Typed
 import LLVM.Pretty

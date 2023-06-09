@@ -17,7 +17,7 @@ module LLVM.Pretty (
 import Prelude hiding ((<$>))
 import GHC.Word
 
-import LLVM.AST.Typed
+import Typed
 
 import LLVM.AST
 import LLVM.AST.Global
@@ -309,6 +309,7 @@ ppAttrInGroup = \case
 
 instance Pretty FunctionAttribute where
   pretty = \case
+   MustProgress                -> "mustprogress"
    AllocSize a (Just b)        -> "allocsize" <> parens (commas [pretty a, pretty b])
    AllocSize a Nothing         -> "allocsize" <> parens (pretty a)
    AlwaysInline                -> "alwaysinline"
