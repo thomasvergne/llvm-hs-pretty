@@ -1,0 +1,12 @@
+source-repository-package
+  type: git
+  location: https://github.com/llvm-hs/llvm-hs
+  subdir: llvm-hs-pure
+
+source-repository-package
+  type: git
+  location: https://github.com/llvm-hs/llvm-hs
+  subdir: llvm-hs
+
+packages: ./llvm-hs-pretty.cabal
+tests: True
